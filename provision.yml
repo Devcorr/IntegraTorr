@@ -5,5 +5,5 @@
       include_vars: ~/.integratorr.yml
     - name: Clone User Projects
       git: repo={{ item }}
-           dest=~/integratorr-work/{{ item }}
+           dest=~/integratorr-work/
       with_items: user_projects
