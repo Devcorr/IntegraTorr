@@ -6,4 +6,4 @@
     - name: Clone User Projects
       git: repo={{ item }}
            dest=~/integratorr-work/{{ item }}
-      with_items: $user_projects
+      with_items: user_projects
