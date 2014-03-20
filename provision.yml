@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: Load Integratorr Config
+      include_vars: ~/.integratorr.yml
+    - name: Clone User Projects
+      git: repo={{ item }}
+           dest=~/integratorr/{{ item }}
+      with_items: $user_projects
