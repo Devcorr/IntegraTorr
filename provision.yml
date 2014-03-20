@@ -4,6 +4,6 @@
     - name: Load Integratorr Config
       include_vars: ~/.integratorr.yml
     - name: Clone User Projects
-      git: repo={{ item }}
-           dest=~/integratorr-work/
+      git: repo={{ item.url }}
+           dest=~/integratorr-work/{{ item.name }}
       with_items: user_projects
