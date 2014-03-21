@@ -1,9 +1,25 @@
 ---
 - hosts: all
   tasks:
-    - name: Load Integratorr Config
-      include_vars: ~/.integratorr.yml
-    - name: Clone User Projects
-      git: repo={{ item.url }}
-           dest=~/integratorr-work/{{ item.name }}
-      with_items: user_projects
+    - apt: update_cache=yes cache_valid_time=3600
+      sudo: yes
+
+    - name: Install git
+      apt: pkg=git
+      sudo: yes
+
+    - name: Install python-pycurl
+      apt: pkg=python-pycurl
+      sudo: yes
+
+    - name: Install python-apt
+      apt: pkg=python-apt
+      sudo: yes
+
+    - name: Add Ansible repo
+      apt_repository: repo=ppa:rquillo/ansible
+      sudo: yes
+
+    - name: Install Ansible
+      apt: pkg=ansible
+      sudo: yes
