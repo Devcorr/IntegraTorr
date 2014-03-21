@@ -23,7 +23,7 @@ a parameter for install.yml, or create a command that can be run in the VM like
 
 **Question**: How will the dev run Integratorr build plans from the host machine? Or will they
 just run them from a terminal that's ssh'd into the vagrant VM? If a web frontend for integratorr
-will eventually run in the Vagrant vm, maybe a simple commandline client available on the host that talks to an integratorr rest api would be good?
+will eventually run in the Vagrant vm, maybe a simple commandline client available on the host that talks to an integratorr rest api would be good? Not unlike the docker client/daemon.
 
 Vagrantfile should remain pretty slim. Other than the Ansible provisioner, most special
 vagrant features should be avoided (e.g. don't rely on vagrant to install docker for you).
