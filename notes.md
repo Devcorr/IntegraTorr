@@ -46,3 +46,5 @@ Integrator setup is very bare bones, it sets up git then pulls configcorr to lev
 
 Should ConfigCorr be a public repo which Integrator uses like a core library of ansible roles,
 or should should every user provide their own ConfigCorr-esque repo with the roles and personalization they need?
+
+Integratorr commandline tool should offer features that make it easier to manage many projects, like the ability to fetch changes from all your git repos with a single command.
