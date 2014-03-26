@@ -1,10 +1,8 @@
 ---
+# This file "installs" integratorr. Assumes Ansible and other basic dependencies
+# have been met.
 - hosts: all
   tasks:
-    - name: Load Integratorr Config
-      include_vars: ~/.integratorr.yml
-
-    - name: Clone User Projects
-      git: repo={{ item.url }}
-           dest=~/integratorr-work/{{ item.name }}
-      with_items: user_projects
+    - name: Symlink int.sh into the PATH
+      file: path=/usr/local/bin/int state=link src={{ integratorr_home }}/int.sh mode=0755
+      sudo: yes

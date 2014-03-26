@@ -1,4 +1,8 @@
 ---
+# This script is intended to be run by the Vagrant Ansible provisioner.
+# When Integratorr is deployed to a non-vagrant machine, the dependencies
+# in this file should be installed however the admin sees fit before
+# installing Integratorr via install.yml.
 - hosts: all
   tasks:
     - apt: update_cache=yes cache_valid_time=3600

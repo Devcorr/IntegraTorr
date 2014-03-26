@@ -1,0 +1,6 @@
+---
+# This file is committed for ease of use right now. Ultimately this file
+# should be added to gitignore so that users can provide their own config.
+
+integratorr_home: /home/vagrant/integratorr-work/IntegraTorr
+integratorr_work: /home/vagrant/integratorr-work
