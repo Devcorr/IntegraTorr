@@ -4,5 +4,5 @@
 - hosts: all
   tasks:
     - name: Symlink int.sh into the PATH
-      file: path=/usr/local/bin/int state=link src={{ integratorr_home }}/int.sh mode=0755
+      template: dest=/usr/local/bin/int src={{ integratorr_home }}/int.sh mode=0755
       sudo: yes

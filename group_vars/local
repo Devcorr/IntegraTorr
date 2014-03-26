@@ -4,3 +4,4 @@
 
 integratorr_home: /home/vagrant/integratorr-work/IntegraTorr
 integratorr_work: /home/vagrant/integratorr-work
+integratorr_config: configcorr
