@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "192.168.40.2"
     config.vm.network "public_network"
 
-    config.vm.synced_folder "~/integratorr-work/", "/home/vagrant/integratorr-work"
+    config.vm.synced_folder "../", "/home/vagrant/integratorr-work"
 
     config.vm.provision "ansible" do |ansible|
         ansible.playbook = "provision.yml"

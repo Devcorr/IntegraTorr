@@ -23,7 +23,3 @@
     - name: Install Ansible
       apt: pkg=ansible
       sudo: yes
-
-    - name: Clone Integratorr
-      git: repo=https://github.com/Devcorr/IntegraTorr.git
-           dest=~/integratorr-work/IntegraTorr
