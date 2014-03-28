@@ -9,6 +9,8 @@ Open questions
 
 * Should ConfigCorr be a public repo which Integrator uses like a core library of ansible roles, or should should every user provide their own ConfigCorr-esque repo with the roles and personalization they need?
 
+* How will we stream stdout for builds and such, since ansible doesn't provide live output? Create some wrapper binary that can stream the logs to the Integratorr client on the host or something?
+
 
 To do
 --------------------------
