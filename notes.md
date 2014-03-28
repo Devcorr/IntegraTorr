@@ -9,6 +9,12 @@ Open questions
 
 * Should ConfigCorr be a public repo which Integrator uses like a core library of ansible roles, or should should every user provide their own ConfigCorr-esque repo with the roles and personalization they need?
 
+
+To do
+--------------------------
+
+It might be nice if Integratorr provided some common ansible roles available to all builds out of the box. Ansible allows you to specify a "roles_path" for default roles. Problem is you can only have one "roles_path", and the only other place Ansible checks for roles is the current playbook directory. I could imagine a scenario where a user wants roles in a project dir AND their own internal "common" roles repository, at which point Integratorr would screw them over if it monopolizes roles_path. What Integratorr could do is parse a conventional location for roles in all user repositories, or in a specified Integratorr config repo like configcorr, and symlink all of those roles into the roles_path.
+
 Getting started with Integratorr in Vagrant
 --------------------------------------------
 
