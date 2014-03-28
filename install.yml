@@ -3,6 +3,6 @@
 # have been met.
 - hosts: all
   tasks:
-    - name: Symlink int.sh into the PATH
+    - name: Add int.sh to the PATH
       template: dest=/usr/local/bin/int src={{ integratorr_home }}/int.sh mode=0755
       sudo: yes
